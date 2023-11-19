@@ -1,5 +1,4 @@
 const {mongoose} = require('./connectDB')
-const { Book } = require('./Libros')
 
 const nanoid = require('nanoid')
 
@@ -21,13 +20,12 @@ let userSchema = mongoose.Schema({
     password: {
         type: String,
         required: true
-    },
-    favoritos: [{type: mongoose.Types.ObjectId, ref: 'Book' }]
+    }
 })
 
 //User.getUsers({}, true)
 userSchema.statics.getUsers = async (params) =>{
-    let projection = {_id: 0, uuid: 1, username: 1, email:1, favoritos: 1, password:1 }
+    let projection = {_id: 0, uuid: 1, username: 1, email:1, password:1 }
 
     const query = {};
 
@@ -40,12 +38,7 @@ userSchema.statics.getUsers = async (params) =>{
     }
 
     let data = await User.find(query, projection)
-                            .populate({
-                                path:'favoritos',
-                                model: 'Book',
-                                select: 'uuid title author, category'
-                            })
-    console.log("Funcion getUsers");
+    //console.log("Funcion getUsers");
     return data
 }
 
@@ -65,7 +58,7 @@ userSchema.statics.getUsersByEmail = async (email) =>{
 
 userSchema.statics.addUser = async (newUser) => {
     let newUserDb = User(newUser);
-    console.log("Funcion addUser");
+    //console.log("Funcion addUser");
     return await newUserDb.save();
 }
 
@@ -73,13 +66,13 @@ userSchema.statics.upadteUser = async function(uuid, userdata){
     //findOneAndUpdate{ buscar, {$set: datos}, {new:true}}
     //let projection = {_id:0, username:1, email:1}
     let data = await User.findOneAndUpdate({uuid}, {$set: userdata}, {new: true})
-    console.log("Funcion UpdateUser");
+    //console.log("Funcion UpdateUser");
     return data
 }
 
 userSchema.statics.deleteUser = async (uuid) =>{
     let user = await User.findOneAndDelete({uuid})
-    console.log("deleteUser");
+    //console.log("deleteUser");
     return user;
 }
 
