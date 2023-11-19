@@ -50,26 +50,6 @@ router.put('/:uuid', async (req, res) => {
     res.send("Cambiado")
 })
 
-// router.put('/favs/:uuid', async (req, res) => {
-//     let user = await User.getUsersByEmail(req.params.uuid)
-
-//     if(!user){
-//         res.status(404).send({error: "user not found"})
-//         return
-//     }
-
-//     let uuid = req.params.uuid
-//     let {favoritos} = req.body
-
-//     let newFavs = {
-//         favoritos
-//     }
-
-//     let chagedFavs =  await  User.upadteUser(uuid, updateUser)
-//     res.send(chagedUser)
-// })
-
-
 router.delete('/:uuid', async (req, res) => {
     let uuid = req.params.uuid
     let user = await User.deleteUser(uuid);

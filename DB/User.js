@@ -78,14 +78,4 @@ userSchema.statics.deleteUser = async (uuid) =>{
 
 let User = mongoose.model('user', userSchema);
 
-//upadteUser("test4@algo.com", {"username": "Bubu"})
-
-//getUsersByEmail("test4@algo.com")
-
-//getUsers({email:"test4@algo.com"});
-//getUsers({email: new RegExp('test', 'i')});
-
-// addUser({email: "test4@algo.com", username: "test2", password: "1234"})
-
-
 module.exports = {User}
