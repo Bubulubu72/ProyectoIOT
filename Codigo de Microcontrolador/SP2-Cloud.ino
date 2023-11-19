@@ -8,16 +8,16 @@
 /****************************************
 * Define Constants
 ****************************************/
-#define WIFISSID "Totalplay-A4AA" //WIFI SSID aqui
-#define PASSWORD "5BADF7A87B" // WIFI pwd
+#define WIFISSID "xxx" //WIFI SSID aqui
+#define PASSWORD "xxx" // WIFI pwd
 
-#define TOKEN "BBFF-bO1HLWneBBDJgdt02j3VP6C7yHsFAX" // Ubidots TOKEN ID el mismo que usamos en clase lo sacan de Ubidtos
-#define MQTT_CLIENT_NAME "7405ITESO" //ID del cliente, 8 a 12 chars alfanumericos (ASCII), debe ser random y unico dif a otros devices
+#define TOKEN "xxx" // Ubidots TOKEN ID el mismo que usamos en clase lo sacan de Ubidtos
+#define MQTT_CLIENT_NAME "xxx" //ID del cliente, 8 a 12 chars alfanumericos (ASCII), debe ser random y unico dif a otros devices
 
 #define VARIABLE_LABEL_temp "temperatura" // Variable Temperatura
 #define VARIABLE_LABEL_hum "humedad" // Variable Humedad
 
-#define DEVICE_LABEL "MQTT-PROJECT-SP2" // Nombre del dispositivo a crear
+#define DEVICE_LABEL "xxx" // Nombre del dispositivo a crear
 
 char mqttBroker[]= "industrial.api.ubidots.com";
 char payload[200]; // Leer y entender el payload aqui una de tantas referencias https://techterms.com/definition/payload
