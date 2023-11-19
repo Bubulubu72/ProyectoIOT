@@ -1,0 +1,114 @@
+@host = http://localhost:3000
+
+@libros = http://localhost:3000/api/libros
+
+### title, description, author, date (12-30-xxxx)
+GET {{host}}/api/libros?date=02-05-2023
+###
+GET {{host}}/api/libros?description=no
+###
+GET {{host}}/api/libros?author=checo
+###
+GET {{host}}/api/libros?category=sifi
+
+###################################################
+GET {{libros}}
+
+###################################################
+POST {{libros}}
+Content-Type: application/json
+
+{
+    "title": "aliens",
+    "description": "Descipcion no tan exacta ",
+    "author": "puphino",
+    "category": "Sifi",
+    "publicationDate": "2023-05-02",
+    "imageUrl": "",
+    "rate": 3
+}
+
+###################################################
+DELETE {{libros}}/
+
+###################################################
+
+PUT {{libros}}/
+Content-Type:  application/json
+
+{
+    "title": "Editado",
+    "description": "Descipcion editada",
+    "author": "checo",
+    "category": "Editado",
+    "publicationDate": "2023-05-01",
+    "imageUrl": "",
+    "rate": 4
+}
+
+###################################################
+###################################################
+
+@User = http://localhost:3000/api/libros/user
+
+###
+GET {{User}}
+
+###
+GET {{User}}?username=bubueno
+
+###
+GET {{User}}?email=txt
+
+###
+POST {{User}}
+Content-Type: application/json
+
+{
+    "username": "algoEjemplo",
+    "email": "ejemplo@ejemplo.com",
+    "password": "1234"
+}
+
+###
+PUT {{User}}/6tpFl-kJ4YY1MgXUPkZsU
+Content-Type: application/json
+
+{
+    "username": "Bubu Cambiado",
+    "password": "2627"
+}
+
+###
+DELETE {{User}}/6tpFl-kJ4YY1MgXUPkZsU
+
+###################################################
+###################################################
+
+@login = http://localhost:3000/api/libros/user/login
+
+###
+GET {{login}}
+x-token: 
+
+###
+
+POST {{login}}
+Content-Type: application/json
+
+{
+    "email": "bubu@ejemplo.com",
+    "password": "2627"
+}
+
+###################################################
+###################################################
+@add = http://localhost:3000/api/libros/user/add
+
+POST {{add}}
+Content-Type: application/json
+
+{
+    "email": "bubu@ejemplo.com",
+    "uuid": "gb3D6CWVphrgbqojGssMZ"
+}

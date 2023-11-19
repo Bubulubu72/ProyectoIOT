@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Productos</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <script src="../JavaScript/Productos.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/productos.css">
+
+    <!-- //////////////////////////////// -->
+
+    <!-- //  NavBar // -->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(100, 99, 99);">
+        <a class="navbar-brand mt-2" href="../Index.html">DASW</a> <!--Principal-->
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+
+            <ul class="navbar-nav mr-auto mt-2"> <!-- Bara Buscadora + boton-->
+                <li class="nav-item active">
+                    <!-- <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control banner" type="text" placeholder="Encuentra de todo Empieza a buscar" id="search">
+                        <button class="btn btn-outline-success my-2 my-sm-2 color_m" type="submit" id="buscar">Buscar</button>
+                    </form> -->
+                </li>
+            </ul>
+        </div>
+           
+        <ul class="mr-0 mt-4 mx-0 "> <!-- Dropdown-->
+                <div class="btn-group">
+                    <button class="btn dropdown-toggle color" type="button" id="mi_cuenta" data-toggle="dropdown" 
+                        aria-haspopup="true" aria-expanded="false">
+                        Admin      
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="mi_cuenta" >
+
+                        <a type="button" class=" dropdown-item" href="../Index.html">Home</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="btn dropdown-item" href="../html/Users.html">Mostrar Usuarios</a>
+                    </div>
+                </div>
+        </ul>
+    </nav>
+
+
+    <!-- /////////////////////////// -->
+
+    <div class="container pt-4">
+        <button type="button" id="addBook" class="btn btn-primary btn-block" data-toggle="modal" data-target="#crearBook">
+            Agregar Libro
+        </button>
+    </div>
+
+    <!-- /////////////////////////// -->
+
+    <div class="container-fluid p-5">
+        <table class="table" border="2" cellspacing="2">
+        <thead>
+            <tr>
+                <th>UUID</th>
+                <th>TITLE</th>
+                <th>DESCIPTION</th>
+                <th>AUTHOR</th>
+                <th>PUBLICATION DATE</th>
+                <th>CATEGORY</th>
+                <th>RATE</th>
+                <th>IMAGEURL</th>
+                <th>EDITAR</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+    </table>
+    </div>
+
+    <br>
+    
+    <!-- Modal -->
+    <div>
+        <div class="modal fade" id="crearBook" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div>
+        <div class="modal fade" id="editarProdcuto" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        </div>
+    </div>
+
+
+</body>
+</html>

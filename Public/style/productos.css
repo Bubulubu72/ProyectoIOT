@@ -1,0 +1,57 @@
+input[type="text"].banner {
+    width: 400px;
+}
+
+button.color, span.color_font {
+    color: white;
+}
+
+button.color_m{
+    color: white;
+    border-color: white;
+}
+
+img.icard{
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 150px; 
+}
+
+input[type="text"].media-price{
+    text-align: center;
+    display: block;
+    width: 130px;
+}
+
+input[type="number"].media-cantidad{
+    text-align: start;
+    width: 170px;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {  
+    opacity: 1;
+}
+
+div.media-body p{
+    padding-left: 10px;
+    font-size: large;
+}
+
+button.pagar{
+    color: green;
+    font-size: 25px;
+}
+
+button.cancelar{
+    color: red;
+}
+
+table{
+    text-align: center;
+}
+
+th{
+    background: rgba(76, 214, 214, 0.37);
+}
