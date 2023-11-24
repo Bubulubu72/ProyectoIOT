@@ -8,10 +8,10 @@ GET {{host}}
 GET {{User}}
 
 ###
-GET {{User}}?username=bubueno
+GET {{User}}?username=bubu
 
 ###
-GET {{User}}?email=txt
+GET {{User}}?email=eje
 
 ###
 POST {{User}}
@@ -24,7 +24,18 @@ Content-Type: application/json
 }
 
 ###
-PUT {{User}}/6tpFl-kJ4YY1MgXUPkZsU
+POST {{User}}
+Content-Type: application/json
+
+{
+    "username": "Bubulubu",
+    "email": "bubu@ejemplo.com",
+    "password": "2627"
+}
+
+
+###
+PUT {{User}}/Ot295lVEkTg2Kgu_SKgPB
 Content-Type: application/json
 
 {
@@ -33,7 +44,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE {{User}}/6tpFl-kJ4YY1MgXUPkZsU
+DELETE {{User}}/_dEHfzXjlB1gToorrzHbi
 
 ###################################################
 ###################################################
@@ -42,8 +53,10 @@ DELETE {{User}}/6tpFl-kJ4YY1MgXUPkZsU
 
 ###
 GET {{login}}
-x-token: 
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1YnVAZWplbXBsby5jb20iLCJpYXQiOjE3MDA0NjE1MDgsImV4cCI6MTcwMDQ2MjEwOH0.JACjyJX4MpnNOgJT9sP6EPwaRVCGISMDwuYc_wrr_I0
 
+
+//12345
 ###
 
 POST {{login}}
@@ -52,16 +65,4 @@ Content-Type: application/json
 {
     "email": "bubu@ejemplo.com",
     "password": "2627"
-}
-
-###################################################
-###################################################
-@add = http://localhost:3000/user/add
-
-POST {{add}}
-Content-Type: application/json
-
-{
-    "email": "bubu@ejemplo.com",
-    "uuid": "gb3D6CWVphrgbqojGssMZ"
 }

@@ -57,3 +57,43 @@
     .form-group button:hover {
       background-color: #2980b9;
     }
+
+    .my-container{
+      display: flex;
+      
+    }
+
+    .boton {
+      background-color: rgb(165, 170, 170);
+      max-width: 100%;
+    }
+
+    .border1 {
+      border: 5px;
+      border-color: aqua;
+
+    }
+
+    hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 6px;
+      max-height: 100%;
+    }
+
+    hr.gradient {
+      height: 3px;
+      border: none;
+      border-radius: 6px;
+      background: linear-gradient(
+        90deg,
+        rgba(13, 8, 96, 1) 0%,
+        rgba(9, 9, 121, 1) 21%,
+        rgba(6, 84, 170, 1) 51%,
+        rgba(0, 255, 113, 1) 100%
+      );
+    }
