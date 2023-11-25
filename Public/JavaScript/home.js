@@ -2,7 +2,6 @@ require('dotenv').config({path: '../.env'})
 
 const url = 'https://industrial.api.ubidots.com/api/v2.0/devices/?token=';
 
-
 const token = process.env.UTOKEN;
 
 console.log('tokan',token);
