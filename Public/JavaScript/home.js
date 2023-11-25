@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 const url = 'https://industrial.api.ubidots.com/api/v2.0/devices/?token=';
 
 
-const UToken = 'BBFF-bO1HLWneBBDJgdt02j3VP6C7yHsFAX'
+const token = process.env.UTOKEN;
 
+console.log('tokan',token);
 
 const device = '65486555c7ff10000d104ca5'
 
@@ -61,7 +64,7 @@ async function getVariables(sensor){
         console.log(info);
 }
 
-getVariables(temp1);
-getVariables(humedad1);
+// getVariables(temp1);
+// getVariables(humedad1);
 
 

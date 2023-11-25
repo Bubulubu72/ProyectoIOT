@@ -1,6 +1,4 @@
 
-let AdminToken = {};
-
 //Funcion Login de Usuario
 async function login () {
     //Revisar inputs
@@ -28,8 +26,9 @@ async function login () {
             // :${response.status}/ User-${response.statusText}
         }
         else{
-            let token = await response.json()
-            console.log(token);
+            const token = await response.json()
+            localStorage.setItem('token', token)
+            isLogged();
         }
     }
     catch (error) {
@@ -79,6 +78,21 @@ async function registrarUsuario(){
 
     
 }
+
+function isLogged() {
+    const storedToken = localStorage.getItem('token');
+    if(storedToken){
+        //console.log('token almacenado');
+        location.href = './html/home.html'
+    }
+    else{
+        //console.log('usuario no autenticado');
+        location.href = '../index.html'
+    }
+
+}
+
+isLogged();
 
 ////////////////////////////////////
 
