@@ -24,19 +24,22 @@
 
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
+
+        <hr class="gradient">
+
         <form class="login-form">
           <div class="form-group">
-            <label for="username">Usuario:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="username">Correo:</label>
+            <input type="email" id="InitEmail" name="username" required>
           </div>
           <div class="form-group">
             <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="InitPassword" name="password" required>
           </div>
 
 
           <div class="container pt-3">
-            <button type="button" class="btn btn-block border">Iniciar Sesión</button>
+            <button type="button" class="btn btn-block border" onclick="login()">Iniciar Sesión</button>
           </div>
 
           <div class="container-fluid">
@@ -71,26 +74,23 @@
               <div class="form-group">
                 <label for="usr">Username</label>
                 <input type="text" class="form-control" name="usr" id="username" aria-describedby="userlHelpId" placeholder="Bubulubu">
-                <small id="userlHelpId" class="form-text text-muted">Cualquier nombre o apodo sirve</small>
               </div>
 
               <div class="form-group">
                 <label for="">Email</label>
                 <input type="email" class="form-control" name="" id="email" aria-describedby="emailHelpId" placeholder="ejemplo@ejemplo.com">
-                <small id="emailHelpId" class="form-text text-muted">ingrese su correo completo</small>
               </div>
 
               <div class="form-group">
                 <label for="pass">Contraseña</label>
-                <input type="password" class="form-control" name="pass" id="password" aria-describedby="passlHelpId" placeholder="Ejemplo1234@">
-                <small id="passlHelpId" class="form-text text-muted">Debe tener una mayuscula, un numero y algun caracter especial</small>
+                <input type="password" class="form-control" name="pass" id="password" aria-describedby="passlHelpId" placeholder="Ejemplo1234@"> 
               </div>
               
 
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="">Close</button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="">Save</button>
+              <button type="submit" class="btn btn-secondary" data-dismiss="modal" onclick="restaurarValores('modalRegUser')">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="registrarUsuario(), restaurarValores('modalRegUser')" id="Registro">Save</button>
             </div>
           </div>
         </div>
