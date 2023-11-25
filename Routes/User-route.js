@@ -15,7 +15,6 @@ router.post('/', async (req, res) => {
         username,
         email,
         password,
-        favoritos: []
     }
 
     User.addUser(newUser)

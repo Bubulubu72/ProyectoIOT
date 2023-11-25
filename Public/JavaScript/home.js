@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({path: '../.env'})
 
 const url = 'https://industrial.api.ubidots.com/api/v2.0/devices/?token=';
 

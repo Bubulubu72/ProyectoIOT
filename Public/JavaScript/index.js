@@ -1,3 +1,4 @@
+require('dotenv').config({path: '../.env'})
 
 //Funcion Login de Usuario
 async function login () {

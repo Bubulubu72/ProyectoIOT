@@ -1,4 +1,4 @@
-
+require('dotenv').config({path: '../.env'})
 
 async function loadUser(queryParams = ''){
     let data = await fetch("/api/libros/user" + queryParams,{
