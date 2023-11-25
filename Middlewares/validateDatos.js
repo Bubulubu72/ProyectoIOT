@@ -1,5 +1,7 @@
+require('dotenv').config({path: '../.env'})
 const jwt = require('jsonwebtoken')
-const config = require('../Config/configuracion')
+
+const jwtSecret = process.env.JWT
 
 function validarToken(req, res, next){
     let token = req.get('x-token');
@@ -9,7 +11,7 @@ function validarToken(req, res, next){
         return
     }
 
-    jwt.verify(token, config.jwtSecret, (error, decoded) =>{
+    jwt.verify(token, jwtSecret, (error, decoded) =>{
         if(error){
             res.status(401).send({error: error.message})
             return

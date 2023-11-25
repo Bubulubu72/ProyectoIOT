@@ -1,8 +1,11 @@
+require('dotenv').config({path: '../.env'})
+
 const router = require('express').Router();
 const jwt = require('jsonwebtoken')
-const config = require('../Config/configuracion')
-const {User} = require('../DB/User');
+
+const { User } = require('../DB/User');
 const { validarToken } = require('../Middlewares/validateDatos');
+
 
 
 router.get('/', validarToken, (req, res) => {
@@ -32,7 +35,7 @@ router.post('/', async (req, res) =>{
     }
 
     let token = jwt.sign({email: user.email}, 
-        config.jwtSecret, {expiresIn: 60 * 10})
+        process.env.JWT, {expiresIn: 60 * 10})
 
     res.send({token})
 })

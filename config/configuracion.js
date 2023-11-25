@@ -6,8 +6,7 @@ let dbConfig = {
     dbName: "IOT",
     dbUrl: function (){
         return `mongodb+srv://${this.user}:${this.password}@cluster0.ui6e6mp.mongodb.net/${this.dbName}?retryWrites=true&w=majority`
-    },
-    jwtSecret: process.env.JWT
+    }
 }
 
 module.exports = dbConfig;

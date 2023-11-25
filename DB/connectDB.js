@@ -1,7 +1,9 @@
-const mongoose = require("mongoose")
-const config = require('../config/configuracion')
+require('dotenv').config({path: '../.env'})
 
-mongoose.connect(config.dbUrl(), {
+const mongoose = require("mongoose")
+const dbConfig = require('../config/configuracion')
+
+mongoose.connect(dbConfig.dbUrl(), {
     useNewUrlParser:true
 }).then(() => {
     console.log("Conected to db");
