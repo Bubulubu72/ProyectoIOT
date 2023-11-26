@@ -1,5 +1,3 @@
-require('dotenv').config({path: '../.env'})
-
 //Funcion Login de Usuario
 async function login () {
     //Revisar inputs
@@ -21,14 +19,12 @@ async function login () {
             body: JSON.stringify(user)
         });
 
-        if(!response.ok) {
+        if(response.status === 401) {
             let errorData = await response.json();
             alert(`Error: ${errorData.error}`)
             // :${response.status}/ User-${response.statusText}
         }
         else{
-            const token = await response.json()
-            localStorage.setItem('token', token)
             isLogged();
         }
     }
@@ -75,23 +71,25 @@ async function registrarUsuario(){
         console.log('valio madre algo en registro de usuarios', error.message);
     }
 
-
-
-    
 }
+async function isLogged() {
+    
+    let response = await fetch('http://localhost:3000/LoggedUser', {
+        method: "GET",
+        headers: {},
+    })
 
-function isLogged() {
-    const storedToken = localStorage.getItem('token');
-    if(storedToken){
+    let data = await response.json()
+
+    if(data.userToken){
         //console.log('token almacenado');
         location.href = './html/home.html'
     }
     else{
         //console.log('usuario no autenticado');
-        location.href = '../index.html'
+        return;
     }
-
-}
+};
 
 isLogged();
 

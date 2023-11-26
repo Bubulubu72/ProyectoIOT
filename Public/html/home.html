@@ -8,7 +8,10 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  </head>
+    
+    <link rel="stylesheet" href="../style/lib.css">
+
+</head>
   <body>
       
     <!-- Optional JavaScript -->
@@ -19,7 +22,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
-
     <!-- //  NavBar // -->
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(125, 125, 219);">
         <a class="navbar-brand mt-2" href="../index.html" onclick="">FOOD WARD</a> <!--Principal-->
@@ -28,9 +30,9 @@
         </div>
 
         <ul class="mr-0 mt-4 mx-0 row"> 
-            <p>test</p>
-
             <div class="btn-group">
+                <button type="button" class="btn white" onclick="logOut()">Log Out</button>
+
                 <button class="btn dropdown-toggle color" type="button" id="mi_cuenta" data-toggle="dropdown" 
                     aria-haspopup="true" aria-expanded="false">
                     Mi Cuenta      
@@ -49,26 +51,53 @@
         </ul>
 
     </nav>
-    <br>
 
-    <div class="container">
-        <label>Numero de dispositivo</label>
-        <input></input>
-    </div>
+    <div class="container-fluid pt-5 pl-5">
+        <div class="row">
+            <div class="col-md-4" >
+                <div class="item-box-blog">
+                    <div class="item-box-blog-image">
+                        <div class="item-box-blog-date bg-blue-ui white"> 
+                            <span class="mon"> Dispotivo No.1</span> 
+                        </div>
+                    </div>
 
-    <div class="col-sm-5 pl-2">
-        <div class="container ">
-        <br>
-        <h4>Temperatura</h4>
-        <p id="temperatura"></p>
-        <br>
-        <h4>Humedad</h4>
-        <p id="humedad"></p>
-        
+                    <div class="item-box-blog-body pt-4">
+
+                        <div class="item-box-blog-heading">
+                            <div class="item-box-blog bg-blue-ui white"> 
+                                <h3>Topper: Comida</h3>
+                            </div>
+                        </div>
+                        <div class="item-box-blog-data pt-3" style="padding: px 15px;">
+                            <h4>Temperatura</h4>
+                            <p id="pTemperatura" style="font-size: x-large;" ></p>
+
+                            <h4>Humedad</h4>
+                            <p id="pHumedad" style="font-size: x-large;" ></p>
+                        </div>
+
+                        <div class="item-box-blog-text">
+                            
+                        </div>
+
+                        <div class="item-box-blog bg-blue-ui white"> 
+                            <span>FECHA DE INICIO:</span>
+                            <span>12/06/23</span>
+                        </div>
+
+                    </div>
+
+                    <div class="">
+                        <button type="button" class="" onclick="showData()">REFRESH</button>
+                    </div>
+                
+
+                </div>
+            </div>
         </div>
     </div>
-    
-    
+
 
 
 </body>

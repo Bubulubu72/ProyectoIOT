@@ -44,14 +44,14 @@ userSchema.statics.getUsers = async (params) =>{
 
 userSchema.statics.getUsersById = async (uuid) =>{
     let doc = await User.findOne({uuid}, 
-        {_id:0, uuid: 1, email:1, username:1, favoritos:1})
+        {_id:0, uuid: 1, email:1, username:1, password:1})
     console.log(doc);
     return doc
 }
 
 userSchema.statics.getUsersByEmail = async (email) =>{
     let doc = await User.findOne({email}, 
-        {_id:0, uuid: 1, email:1, username:1, favoritos:1})
+        {_id:0, uuid: 1, email:1, username:1, password:1})
     //console.log(doc);
     return doc
 }

@@ -53,7 +53,7 @@ DELETE {{User}}/_dEHfzXjlB1gToorrzHbi
 
 ###
 GET {{login}}
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1YnVAZWplbXBsby5jb20iLCJpYXQiOjE3MDA0NjE1MDgsImV4cCI6MTcwMDQ2MjEwOH0.JACjyJX4MpnNOgJT9sP6EPwaRVCGISMDwuYc_wrr_I0
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsZWphbmRybzc0MDUyMUBvdXRsb29rLmNvbSIsImlhdCI6MTcwMTAzMzExMywiZXhwIjoxNzAxMDMzNzEzfQ.EtlgV_XX2ZU-xNK-Scnbeuy4knlYS0peoBtoVfG6skc
 
 
 //12345
@@ -64,5 +64,17 @@ Content-Type: application/json
 
 {
     "email": "bubu@ejemplo.com",
-    "password": "2627"
+    "password": "26"
 }
+
+###################################################
+###################################################
+
+
+###
+GET http://localhost:3000/setCokkie
+
+
+####
+GET http://localhost:3000/LoggedUser
+
