@@ -22,7 +22,8 @@
     "nanoid": "^3.0.0"
   },
   "engines": {
-    "node": "18.15.0"
+    "node": "18.15.0",
+    "npm": "9.5.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
