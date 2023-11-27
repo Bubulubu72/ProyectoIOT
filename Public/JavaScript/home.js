@@ -37,7 +37,7 @@ showData();
 //////////////////////
 
 function checkCookieStatus(){
-
+    
 }
 
 
