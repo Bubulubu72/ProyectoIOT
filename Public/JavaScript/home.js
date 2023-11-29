@@ -60,7 +60,7 @@ async function logOut() {
             headers: {},
         })
 
-        location.href = '../index.html'
+        location.href = '../Index.html'
     }
     else{
         console.log('user not logged');
